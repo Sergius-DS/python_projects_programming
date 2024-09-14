@@ -7,15 +7,11 @@
 
 ## Descripción
 
-En este repositorio se mostrarán proyectos de programación en python. 
+En este repositorio se mostrarán proyectos de programación en python.
+
 Es una forma de mejorar la lógica a la hora de crear funciones y a la vez practicar. 
 
 
-## Enlaces
-
-Dashboard: 
-
-Deploy: 
 
 
 
