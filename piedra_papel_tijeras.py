@@ -3,6 +3,9 @@ import random
 user_wins = 0
 computer_wins = 0
 
+nombre = input("Ingrese su nombre: ")
+nombre = nombre.capitalize()
+
 options = ["piedra", "papel", "tijeras"]
 
 while True:
@@ -35,6 +38,18 @@ while True:
     print("Perdiste!")
     computer_wins += 1
 
-print("Ganaste", user_wins, "veces.")
-print("Perdiste", computer_wins, "veces.")
-print("Gracias por jugar!")
+if user_wins == 1 and computer_wins == 1:
+  print(nombre, "Ganaste", user_wins, "vez.")
+  print(nombre, "Perdiste", computer_wins, "vez.")
+elif user_wins > 1 and computer_wins > 1:
+  print(nombre, "Ganaste", user_wins, "veces.")
+  print(nombre, "Perdiste", computer_wins, "veces.")
+elif user_wins > 1:
+  print(nombre, "Ganaste", user_wins, "veces.")
+  print(nombre, "Perdiste", computer_wins, "vez" if computer_wins == 1 else "veces.")
+elif computer_wins > 1:
+  print(nombre, "Ganaste", user_wins, "vez" if user_wins == 1 else "veces.")
+  print(nombre, "Perdiste", computer_wins, "veces.")
+
+
+print(nombre, "Gracias por jugar!")
