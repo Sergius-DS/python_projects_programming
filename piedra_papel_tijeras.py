@@ -38,18 +38,14 @@ while True:
     print("Perdiste!")
     computer_wins += 1
 
-if user_wins == 1 and computer_wins == 1:
-  print(nombre, "Ganaste", user_wins, "vez.")
-  print(nombre, "Perdiste", computer_wins, "vez.")
-elif user_wins > 1 and computer_wins > 1:
-  print(nombre, "Ganaste", user_wins, "veces.")
-  print(nombre, "Perdiste", computer_wins, "veces.")
-elif user_wins > 1:
-  print(nombre, "Ganaste", user_wins, "veces.")
-  print(nombre, "Perdiste", computer_wins, "vez" if computer_wins == 1 else "veces.")
-elif computer_wins > 1:
-  print(nombre, "Ganaste", user_wins, "vez" if user_wins == 1 else "veces.")
-  print(nombre, "Perdiste", computer_wins, "veces.")
+if user_wins == computer_wins == 1:
+    print(f"{nombre} Ganaste {user_wins} vez.")
+    print(f"{nombre} Perdiste {computer_wins} vez.")
+else:
+    user_wins_str = "vez" if user_wins == 1 else "veces"
+    computer_wins_str = "vez" if computer_wins == 1 else "veces"
+    print(f"{nombre} Ganaste {user_wins} {user_wins_str}.")
+    print(f"{nombre} Perdiste {computer_wins} {computer_wins_str}.")
 
 
 print(nombre, "Gracias por jugar!")
